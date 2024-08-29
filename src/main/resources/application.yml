@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: demo
+  r2dbc:
+    url: ${DB_URL}
+    username: postgres
+    password: root
+    properties:
+      schema: users
+  
+
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: DEBUG
+
+jwt:
+  private:
+    key: classpath:keys/private.pem
+  public:
+    key: classpath:keys/public.pem
+  secret:
+    issuer: "c0sLXDcmmwzboM9giH1elLr8rT4m5a07T6c7iHsav2c="
